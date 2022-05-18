@@ -1,0 +1,1449 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <h1>Wish</h1>
+    <div id="chart" style="margin: 35px auto;"></div>
+
+    <script>
+        var options = {
+            series: [{
+                name: "Wish",
+                data: [
+                    {
+                        x: new Date("2020-12-16").getTime(),
+                        y: 20.049999
+                    },
+                    {
+                        x: new Date("2020-12-17").getTime(),
+                        y: 22.27
+                    },
+                    {
+                        x: new Date("2020-12-18").getTime(),
+                        y: 23.549999
+                    },
+                    {
+                        x: new Date("2020-12-21").getTime(),
+                        y: 23.15
+                    },
+                    {
+                        x: new Date("2020-12-22").getTime(),
+                        y: 22.190001
+                    },
+                    {
+                        x: new Date("2020-12-23").getTime(),
+                        y: 20.940001
+                    },
+                    {
+                        x: new Date("2020-12-24").getTime(),
+                        y: 20.09
+                    },
+                    {
+                        x: new Date("2020-12-28").getTime(),
+                        y: 19.610001
+                    },
+                    {
+                        x: new Date("2020-12-29").getTime(),
+                        y: 18.639999
+                    },
+                    {
+                        x: new Date("2020-12-30").getTime(),
+                        y: 17.58
+                    },
+                    {
+                        x: new Date("2020-12-31").getTime(),
+                        y: 18.24
+                    },
+                    {
+                        x: new Date("2021-01-04").getTime(),
+                        y: 19.24
+                    },
+                    {
+                        x: new Date("2021-01-05").getTime(),
+                        y: 19.799999
+                    },
+                    {
+                        x: new Date("2021-01-06").getTime(),
+                        y: 20.82
+                    },
+                    {
+                        x: new Date("2021-01-07").getTime(),
+                        y: 20.93
+                    },
+                    {
+                        x: new Date("2021-01-08").getTime(),
+                        y: 20.360001
+                    },
+                    {
+                        x: new Date("2021-01-11").getTime(),
+                        y: 19.610001
+                    },
+                    {
+                        x: new Date("2021-01-12").getTime(),
+                        y: 20.940001
+                    },
+                    {
+                        x: new Date("2021-01-13").getTime(),
+                        y: 23.92
+                    },
+                    {
+                        x: new Date("2021-01-14").getTime(),
+                        y: 28.129999
+                    },
+                    {
+                        x: new Date("2021-01-15").getTime(),
+                        y: 24.834999
+                    },
+                    {
+                        x: new Date("2021-01-19").getTime(),
+                        y: 26.09
+                    },
+                    {
+                        x: new Date("2021-01-20").getTime(),
+                        y: 25.85
+                    },
+                    {
+                        x: new Date("2021-01-21").getTime(),
+                        y: 24.84
+                    },
+                    {
+                        x: new Date("2021-01-22").getTime(),
+                        y: 24.75
+                    },
+                    {
+                        x: new Date("2021-01-25").getTime(),
+                        y: 25.65
+                    },
+                    {
+                        x: new Date("2021-01-26").getTime(),
+                        y: 27.1
+                    },
+                    {
+                        x: new Date("2021-01-27").getTime(),
+                        y: 29.99
+                    },
+                    {
+                        x: new Date("2021-01-28").getTime(),
+                        y: 28.450001
+                    },
+                    {
+                        x: new Date("2021-01-29").getTime(),
+                        y: 30.07
+                    },
+                    {
+                        x: new Date("2021-02-01").getTime(),
+                        y: 31.190001
+                    },
+                    {
+                        x: new Date("2021-02-02").getTime(),
+                        y: 29.15
+                    },
+                    {
+                        x: new Date("2021-02-03").getTime(),
+                        y: 28.99
+                    },
+                    {
+                        x: new Date("2021-02-04").getTime(),
+                        y: 29.299999
+                    },
+                    {
+                        x: new Date("2021-02-05").getTime(),
+                        y: 28.6
+                    },
+                    {
+                        x: new Date("2021-02-08").getTime(),
+                        y: 28.209999
+                    },
+                    {
+                        x: new Date("2021-02-09").getTime(),
+                        y: 29.530001
+                    },
+                    {
+                        x: new Date("2021-02-10").getTime(),
+                        y: 28.68
+                    },
+                    {
+                        x: new Date("2021-02-11").getTime(),
+                        y: 28.08
+                    },
+                    {
+                        x: new Date("2021-02-12").getTime(),
+                        y: 27.450001
+                    },
+                    {
+                        x: new Date("2021-02-16").getTime(),
+                        y: 26.559999
+                    },
+                    {
+                        x: new Date("2021-02-17").getTime(),
+                        y: 24.15
+                    },
+                    {
+                        x: new Date("2021-02-18").getTime(),
+                        y: 22.24
+                    },
+                    {
+                        x: new Date("2021-02-19").getTime(),
+                        y: 22.26
+                    },
+                    {
+                        x: new Date("2021-02-22").getTime(),
+                        y: 22.01
+                    },
+                    {
+                        x: new Date("2021-02-23").getTime(),
+                        y: 21.17
+                    },
+                    {
+                        x: new Date("2021-02-24").getTime(),
+                        y: 20.42
+                    },
+                    {
+                        x: new Date("2021-02-25").getTime(),
+                        y: 18.969999
+                    },
+                    {
+                        x: new Date("2021-02-26").getTime(),
+                        y: 19.610001
+                    },
+                    {
+                        x: new Date("2021-03-01").getTime(),
+                        y: 19.58
+                    },
+                    {
+                        x: new Date("2021-03-02").getTime(),
+                        y: 18.82
+                    },
+                    {
+                        x: new Date("2021-03-03").getTime(),
+                        y: 17.99
+                    },
+                    {
+                        x: new Date("2021-03-04").getTime(),
+                        y: 17.139999
+                    },
+                    {
+                        x: new Date("2021-03-05").getTime(),
+                        y: 17.77
+                    },
+                    {
+                        x: new Date("2021-03-08").getTime(),
+                        y: 15.94
+                    },
+                    {
+                        x: new Date("2021-03-09").getTime(),
+                        y: 16.99
+                    },
+                    {
+                        x: new Date("2021-03-10").getTime(),
+                        y: 16.629999
+                    },
+                    {
+                        x: new Date("2021-03-11").getTime(),
+                        y: 19.110001
+                    },
+                    {
+                        x: new Date("2021-03-12").getTime(),
+                        y: 18.639999
+                    },
+                    {
+                        x: new Date("2021-03-15").getTime(),
+                        y: 19.110001
+                    },
+                    {
+                        x: new Date("2021-03-16").getTime(),
+                        y: 18.34
+                    },
+                    {
+                        x: new Date("2021-03-17").getTime(),
+                        y: 18.84
+                    },
+                    {
+                        x: new Date("2021-03-18").getTime(),
+                        y: 17.26
+                    },
+                    {
+                        x: new Date("2021-03-19").getTime(),
+                        y: 17.860001
+                    },
+                    {
+                        x: new Date("2021-03-22").getTime(),
+                        y: 17.98
+                    },
+                    {
+                        x: new Date("2021-03-23").getTime(),
+                        y: 16.559999
+                    },
+                    {
+                        x: new Date("2021-03-24").getTime(),
+                        y: 16.299999
+                    },
+                    {
+                        x: new Date("2021-03-25").getTime(),
+                        y: 15.76
+                    },
+                    {
+                        x: new Date("2021-03-26").getTime(),
+                        y: 16.209999
+                    },
+                    {
+                        x: new Date("2021-03-29").getTime(),
+                        y: 15.26
+                    },
+                    {
+                        x: new Date("2021-03-30").getTime(),
+                        y: 15.1
+                    },
+                    {
+                        x: new Date("2021-03-31").getTime(),
+                        y: 15.8
+                    },
+                    {
+                        x: new Date("2021-04-01").getTime(),
+                        y: 15.65
+                    },
+                    {
+                        x: new Date("2021-04-05").getTime(),
+                        y: 15.32
+                    },
+                    {
+                        x: new Date("2021-04-06").getTime(),
+                        y: 15.52
+                    },
+                    {
+                        x: new Date("2021-04-07").getTime(),
+                        y: 14.33
+                    },
+                    {
+                        x: new Date("2021-04-08").getTime(),
+                        y: 14.08
+                    },
+                    {
+                        x: new Date("2021-04-09").getTime(),
+                        y: 13.65
+                    },
+                    {
+                        x: new Date("2021-04-12").getTime(),
+                        y: 13.6
+                    },
+                    {
+                        x: new Date("2021-04-13").getTime(),
+                        y: 14.27
+                    },
+                    {
+                        x: new Date("2021-04-14").getTime(),
+                        y: 13.53
+                    },
+                    {
+                        x: new Date("2021-04-15").getTime(),
+                        y: 12.72
+                    },
+                    {
+                        x: new Date("2021-04-16").getTime(),
+                        y: 12.44
+                    },
+                    {
+                        x: new Date("2021-04-19").getTime(),
+                        y: 12.31
+                    },
+                    {
+                        x: new Date("2021-04-20").getTime(),
+                        y: 12.07
+                    },
+                    {
+                        x: new Date("2021-04-21").getTime(),
+                        y: 12.49
+                    },
+                    {
+                        x: new Date("2021-04-22").getTime(),
+                        y: 13.1
+                    },
+                    {
+                        x: new Date("2021-04-23").getTime(),
+                        y: 13.54
+                    },
+                    {
+                        x: new Date("2021-04-26").getTime(),
+                        y: 14.16
+                    },
+                    {
+                        x: new Date("2021-04-27").getTime(),
+                        y: 15.12
+                    },
+                    {
+                        x: new Date("2021-04-28").getTime(),
+                        y: 15.19
+                    },
+                    {
+                        x: new Date("2021-04-29").getTime(),
+                        y: 14.16
+                    },
+                    {
+                        x: new Date("2021-04-30").getTime(),
+                        y: 13.87
+                    },
+                    {
+                        x: new Date("2021-05-03").getTime(),
+                        y: 13.08
+                    },
+                    {
+                        x: new Date("2021-05-04").getTime(),
+                        y: 13.43
+                    },
+                    {
+                        x: new Date("2021-05-05").getTime(),
+                        y: 12.58
+                    },
+                    {
+                        x: new Date("2021-05-06").getTime(),
+                        y: 12.65
+                    },
+                    {
+                        x: new Date("2021-05-07").getTime(),
+                        y: 12.61
+                    },
+                    {
+                        x: new Date("2021-05-10").getTime(),
+                        y: 11.88
+                    },
+                    {
+                        x: new Date("2021-05-11").getTime(),
+                        y: 11.78
+                    },
+                    {
+                        x: new Date("2021-05-12").getTime(),
+                        y: 11.47
+                    },
+                    {
+                        x: new Date("2021-05-13").getTime(),
+                        y: 8.11
+                    },
+                    {
+                        x: new Date("2021-05-14").getTime(),
+                        y: 9.79
+                    },
+                    {
+                        x: new Date("2021-05-17").getTime(),
+                        y: 8.78
+                    },
+                    {
+                        x: new Date("2021-05-18").getTime(),
+                        y: 8.99
+                    },
+                    {
+                        x: new Date("2021-05-19").getTime(),
+                        y: 9.12
+                    },
+                    {
+                        x: new Date("2021-05-20").getTime(),
+                        y: 9.29
+                    },
+                    {
+                        x: new Date("2021-05-21").getTime(),
+                        y: 9.32
+                    },
+                    {
+                        x: new Date("2021-05-24").getTime(),
+                        y: 8.18
+                    },
+                    {
+                        x: new Date("2021-05-25").getTime(),
+                        y: 7.84
+                    },
+                    {
+                        x: new Date("2021-05-26").getTime(),
+                        y: 8.15
+                    },
+                    {
+                        x: new Date("2021-05-27").getTime(),
+                        y: 8.35
+                    },
+                    {
+                        x: new Date("2021-05-28").getTime(),
+                        y: 7.94
+                    },
+                    {
+                        x: new Date("2021-06-01").getTime(),
+                        y: 7.74
+                    },
+                    {
+                        x: new Date("2021-06-02").getTime(),
+                        y: 8.5
+                    },
+                    {
+                        x: new Date("2021-06-03").getTime(),
+                        y: 8.28
+                    },
+                    {
+                        x: new Date("2021-06-04").getTime(),
+                        y: 8.29
+                    },
+                    {
+                        x: new Date("2021-06-07").getTime(),
+                        y: 7.76
+                    },
+                    {
+                        x: new Date("2021-06-08").getTime(),
+                        y: 11.63
+                    },
+                    {
+                        x: new Date("2021-06-09").getTime(),
+                        y: 10.6
+                    },
+                    {
+                        x: new Date("2021-06-10").getTime(),
+                        y: 10.69
+                    },
+                    {
+                        x: new Date("2021-06-11").getTime(),
+                        y: 10.0
+                    },
+                    {
+                        x: new Date("2021-06-14").getTime(),
+                        y: 11.27
+                    },
+                    {
+                        x: new Date("2021-06-15").getTime(),
+                        y: 11.27
+                    },
+                    {
+                        x: new Date("2021-06-16").getTime(),
+                        y: 11.09
+                    },
+                    {
+                        x: new Date("2021-06-17").getTime(),
+                        y: 11.23
+                    },
+                    {
+                        x: new Date("2021-06-18").getTime(),
+                        y: 11.4
+                    },
+                    {
+                        x: new Date("2021-06-21").getTime(),
+                        y: 13.5
+                    },
+                    {
+                        x: new Date("2021-06-22").getTime(),
+                        y: 13.5
+                    },
+                    {
+                        x: new Date("2021-06-23").getTime(),
+                        y: 13.61
+                    },
+                    {
+                        x: new Date("2021-06-24").getTime(),
+                        y: 14.39
+                    },
+                    {
+                        x: new Date("2021-06-25").getTime(),
+                        y: 14.04
+                    },
+                    {
+                        x: new Date("2021-06-28").getTime(),
+                        y: 14.4
+                    },
+                    {
+                        x: new Date("2021-06-29").getTime(),
+                        y: 13.4
+                    },
+                    {
+                        x: new Date("2021-06-30").getTime(),
+                        y: 13.17
+                    },
+                    {
+                        x: new Date("2021-07-01").getTime(),
+                        y: 12.24
+                    },
+                    {
+                        x: new Date("2021-07-02").getTime(),
+                        y: 11.65
+                    },
+                    {
+                        x: new Date("2021-07-06").getTime(),
+                        y: 11.89
+                    },
+                    {
+                        x: new Date("2021-07-07").getTime(),
+                        y: 10.95
+                    },
+                    {
+                        x: new Date("2021-07-08").getTime(),
+                        y: 11.0
+                    },
+                    {
+                        x: new Date("2021-07-09").getTime(),
+                        y: 11.14
+                    },
+                    {
+                        x: new Date("2021-07-12").getTime(),
+                        y: 10.91
+                    },
+                    {
+                        x: new Date("2021-07-13").getTime(),
+                        y: 10.4
+                    },
+                    {
+                        x: new Date("2021-07-14").getTime(),
+                        y: 9.78
+                    },
+                    {
+                        x: new Date("2021-07-15").getTime(),
+                        y: 10.09
+                    },
+                    {
+                        x: new Date("2021-07-16").getTime(),
+                        y: 9.27
+                    },
+                    {
+                        x: new Date("2021-07-19").getTime(),
+                        y: 9.44
+                    },
+                    {
+                        x: new Date("2021-07-20").getTime(),
+                        y: 10.14
+                    },
+                    {
+                        x: new Date("2021-07-21").getTime(),
+                        y: 10.0
+                    },
+                    {
+                        x: new Date("2021-07-22").getTime(),
+                        y: 9.5
+                    },
+                    {
+                        x: new Date("2021-07-23").getTime(),
+                        y: 9.18
+                    },
+                    {
+                        x: new Date("2021-07-26").getTime(),
+                        y: 9.16
+                    },
+                    {
+                        x: new Date("2021-07-27").getTime(),
+                        y: 9.32
+                    },
+                    {
+                        x: new Date("2021-07-28").getTime(),
+                        y: 9.94
+                    },
+                    {
+                        x: new Date("2021-07-29").getTime(),
+                        y: 9.98
+                    },
+                    {
+                        x: new Date("2021-07-30").getTime(),
+                        y: 9.94
+                    },
+                    {
+                        x: new Date("2021-08-02").getTime(),
+                        y: 10.41
+                    },
+                    {
+                        x: new Date("2021-08-03").getTime(),
+                        y: 10.31
+                    },
+                    {
+                        x: new Date("2021-08-04").getTime(),
+                        y: 9.61
+                    },
+                    {
+                        x: new Date("2021-08-05").getTime(),
+                        y: 9.98
+                    },
+                    {
+                        x: new Date("2021-08-06").getTime(),
+                        y: 9.83
+                    },
+                    {
+                        x: new Date("2021-08-09").getTime(),
+                        y: 10.47
+                    },
+                    {
+                        x: new Date("2021-08-10").getTime(),
+                        y: 10.3
+                    },
+                    {
+                        x: new Date("2021-08-11").getTime(),
+                        y: 9.83
+                    },
+                    {
+                        x: new Date("2021-08-12").getTime(),
+                        y: 9.41
+                    },
+                    {
+                        x: new Date("2021-08-13").getTime(),
+                        y: 7.55
+                    },
+                    {
+                        x: new Date("2021-08-16").getTime(),
+                        y: 6.87
+                    },
+                    {
+                        x: new Date("2021-08-17").getTime(),
+                        y: 6.95
+                    },
+                    {
+                        x: new Date("2021-08-18").getTime(),
+                        y: 6.82
+                    },
+                    {
+                        x: new Date("2021-08-19").getTime(),
+                        y: 6.23
+                    },
+                    {
+                        x: new Date("2021-08-20").getTime(),
+                        y: 6.63
+                    },
+                    {
+                        x: new Date("2021-08-23").getTime(),
+                        y: 6.69
+                    },
+                    {
+                        x: new Date("2021-08-24").getTime(),
+                        y: 7.12
+                    },
+                    {
+                        x: new Date("2021-08-25").getTime(),
+                        y: 6.98
+                    },
+                    {
+                        x: new Date("2021-08-26").getTime(),
+                        y: 6.66
+                    },
+                    {
+                        x: new Date("2021-08-27").getTime(),
+                        y: 6.94
+                    },
+                    {
+                        x: new Date("2021-08-30").getTime(),
+                        y: 7.18
+                    },
+                    {
+                        x: new Date("2021-08-31").getTime(),
+                        y: 7.21
+                    },
+                    {
+                        x: new Date("2021-09-01").getTime(),
+                        y: 7.38
+                    },
+                    {
+                        x: new Date("2021-09-02").getTime(),
+                        y: 7.31
+                    },
+                    {
+                        x: new Date("2021-09-03").getTime(),
+                        y: 7.24
+                    },
+                    {
+                        x: new Date("2021-09-07").getTime(),
+                        y: 7.38
+                    },
+                    {
+                        x: new Date("2021-09-08").getTime(),
+                        y: 6.84
+                    },
+                    {
+                        x: new Date("2021-09-09").getTime(),
+                        y: 6.99
+                    },
+                    {
+                        x: new Date("2021-09-10").getTime(),
+                        y: 6.8
+                    },
+                    {
+                        x: new Date("2021-09-13").getTime(),
+                        y: 6.61
+                    },
+                    {
+                        x: new Date("2021-09-14").getTime(),
+                        y: 6.33
+                    },
+                    {
+                        x: new Date("2021-09-15").getTime(),
+                        y: 6.41
+                    },
+                    {
+                        x: new Date("2021-09-16").getTime(),
+                        y: 6.31
+                    },
+                    {
+                        x: new Date("2021-09-17").getTime(),
+                        y: 6.54
+                    },
+                    {
+                        x: new Date("2021-09-20").getTime(),
+                        y: 6.07
+                    },
+                    {
+                        x: new Date("2021-09-21").getTime(),
+                        y: 5.85
+                    },
+                    {
+                        x: new Date("2021-09-22").getTime(),
+                        y: 5.91
+                    },
+                    {
+                        x: new Date("2021-09-23").getTime(),
+                        y: 6.135
+                    },
+                    {
+                        x: new Date("2021-09-24").getTime(),
+                        y: 6.02
+                    },
+                    {
+                        x: new Date("2021-09-27").getTime(),
+                        y: 6.18
+                    },
+                    {
+                        x: new Date("2021-09-28").getTime(),
+                        y: 5.8
+                    },
+                    {
+                        x: new Date("2021-09-29").getTime(),
+                        y: 5.59
+                    },
+                    {
+                        x: new Date("2021-09-30").getTime(),
+                        y: 5.46
+                    },
+                    {
+                        x: new Date("2021-10-01").getTime(),
+                        y: 5.35
+                    },
+                    {
+                        x: new Date("2021-10-04").getTime(),
+                        y: 4.85
+                    },
+                    {
+                        x: new Date("2021-10-05").getTime(),
+                        y: 4.78
+                    },
+                    {
+                        x: new Date("2021-10-06").getTime(),
+                        y: 4.9
+                    },
+                    {
+                        x: new Date("2021-10-07").getTime(),
+                        y: 5.18
+                    },
+                    {
+                        x: new Date("2021-10-08").getTime(),
+                        y: 5.01
+                    },
+                    {
+                        x: new Date("2021-10-11").getTime(),
+                        y: 4.92
+                    },
+                    {
+                        x: new Date("2021-10-12").getTime(),
+                        y: 5.08
+                    },
+                    {
+                        x: new Date("2021-10-13").getTime(),
+                        y: 5.18
+                    },
+                    {
+                        x: new Date("2021-10-14").getTime(),
+                        y: 5.16
+                    },
+                    {
+                        x: new Date("2021-10-15").getTime(),
+                        y: 5.04
+                    },
+                    {
+                        x: new Date("2021-10-18").getTime(),
+                        y: 5.02
+                    },
+                    {
+                        x: new Date("2021-10-19").getTime(),
+                        y: 5.32
+                    },
+                    {
+                        x: new Date("2021-10-20").getTime(),
+                        y: 6.09
+                    },
+                    {
+                        x: new Date("2021-10-21").getTime(),
+                        y: 5.82
+                    },
+                    {
+                        x: new Date("2021-10-22").getTime(),
+                        y: 5.2
+                    },
+                    {
+                        x: new Date("2021-10-25").getTime(),
+                        y: 5.5
+                    },
+                    {
+                        x: new Date("2021-10-26").getTime(),
+                        y: 5.24
+                    },
+                    {
+                        x: new Date("2021-10-27").getTime(),
+                        y: 4.96
+                    },
+                    {
+                        x: new Date("2021-10-28").getTime(),
+                        y: 5.25
+                    },
+                    {
+                        x: new Date("2021-10-29").getTime(),
+                        y: 5.1
+                    },
+                    {
+                        x: new Date("2021-11-01").getTime(),
+                        y: 5.45
+                    },
+                    {
+                        x: new Date("2021-11-02").getTime(),
+                        y: 5.21
+                    },
+                    {
+                        x: new Date("2021-11-03").getTime(),
+                        y: 5.21
+                    },
+                    {
+                        x: new Date("2021-11-04").getTime(),
+                        y: 5.07
+                    },
+                    {
+                        x: new Date("2021-11-05").getTime(),
+                        y: 4.93
+                    },
+                    {
+                        x: new Date("2021-11-08").getTime(),
+                        y: 5.21
+                    },
+                    {
+                        x: new Date("2021-11-09").getTime(),
+                        y: 5.49
+                    },
+                    {
+                        x: new Date("2021-11-10").getTime(),
+                        y: 5.1
+                    },
+                    {
+                        x: new Date("2021-11-11").getTime(),
+                        y: 5.47
+                    },
+                    {
+                        x: new Date("2021-11-12").getTime(),
+                        y: 5.41
+                    },
+                    {
+                        x: new Date("2021-11-15").getTime(),
+                        y: 5.18
+                    },
+                    {
+                        x: new Date("2021-11-16").getTime(),
+                        y: 5.07
+                    },
+                    {
+                        x: new Date("2021-11-17").getTime(),
+                        y: 4.77
+                    },
+                    {
+                        x: new Date("2021-11-18").getTime(),
+                        y: 4.39
+                    },
+                    {
+                        x: new Date("2021-11-19").getTime(),
+                        y: 4.25
+                    },
+                    {
+                        x: new Date("2021-11-22").getTime(),
+                        y: 4.1
+                    },
+                    {
+                        x: new Date("2021-11-23").getTime(),
+                        y: 3.97
+                    },
+                    {
+                        x: new Date("2021-11-24").getTime(),
+                        y: 3.97
+                    },
+                    {
+                        x: new Date("2021-11-26").getTime(),
+                        y: 3.92
+                    },
+                    {
+                        x: new Date("2021-11-29").getTime(),
+                        y: 3.96
+                    },
+                    {
+                        x: new Date("2021-11-30").getTime(),
+                        y: 3.73
+                    },
+                    {
+                        x: new Date("2021-12-01").getTime(),
+                        y: 3.35
+                    },
+                    {
+                        x: new Date("2021-12-02").getTime(),
+                        y: 3.36
+                    },
+                    {
+                        x: new Date("2021-12-03").getTime(),
+                        y: 3.28
+                    },
+                    {
+                        x: new Date("2021-12-06").getTime(),
+                        y: 3.61
+                    },
+                    {
+                        x: new Date("2021-12-07").getTime(),
+                        y: 3.74
+                    },
+                    {
+                        x: new Date("2021-12-08").getTime(),
+                        y: 3.78
+                    },
+                    {
+                        x: new Date("2021-12-09").getTime(),
+                        y: 3.6
+                    },
+                    {
+                        x: new Date("2021-12-10").getTime(),
+                        y: 3.58
+                    },
+                    {
+                        x: new Date("2021-12-13").getTime(),
+                        y: 3.41
+                    },
+                    {
+                        x: new Date("2021-12-14").getTime(),
+                        y: 3.19
+                    },
+                    {
+                        x: new Date("2021-12-15").getTime(),
+                        y: 3.22
+                    },
+                    {
+                        x: new Date("2021-12-16").getTime(),
+                        y: 3.11
+                    },
+                    {
+                        x: new Date("2021-12-17").getTime(),
+                        y: 3.23
+                    },
+                    {
+                        x: new Date("2021-12-20").getTime(),
+                        y: 3.09
+                    },
+                    {
+                        x: new Date("2021-12-21").getTime(),
+                        y: 3.54
+                    },
+                    {
+                        x: new Date("2021-12-22").getTime(),
+                        y: 3.48
+                    },
+                    {
+                        x: new Date("2021-12-23").getTime(),
+                        y: 3.58
+                    },
+                    {
+                        x: new Date("2021-12-27").getTime(),
+                        y: 3.36
+                    },
+                    {
+                        x: new Date("2021-12-28").getTime(),
+                        y: 3.19
+                    },
+                    {
+                        x: new Date("2021-12-29").getTime(),
+                        y: 3.01
+                    },
+                    {
+                        x: new Date("2021-12-30").getTime(),
+                        y: 3.22
+                    },
+                    {
+                        x: new Date("2021-12-31").getTime(),
+                        y: 3.11
+                    },
+                    {
+                        x: new Date("2022-01-03").getTime(),
+                        y: 3.22
+                    },
+                    {
+                        x: new Date("2022-01-04").getTime(),
+                        y: 3.04
+                    },
+                    {
+                        x: new Date("2022-01-05").getTime(),
+                        y: 2.79
+                    },
+                    {
+                        x: new Date("2022-01-06").getTime(),
+                        y: 2.72
+                    },
+                    {
+                        x: new Date("2022-01-07").getTime(),
+                        y: 2.76
+                    },
+                    {
+                        x: new Date("2022-01-10").getTime(),
+                        y: 2.59
+                    },
+                    {
+                        x: new Date("2022-01-11").getTime(),
+                        y: 2.79
+                    },
+                    {
+                        x: new Date("2022-01-12").getTime(),
+                        y: 2.72
+                    },
+                    {
+                        x: new Date("2022-01-13").getTime(),
+                        y: 2.53
+                    },
+                    {
+                        x: new Date("2022-01-14").getTime(),
+                        y: 2.53
+                    },
+                    {
+                        x: new Date("2022-01-18").getTime(),
+                        y: 2.47
+                    },
+                    {
+                        x: new Date("2022-01-19").getTime(),
+                        y: 2.45
+                    },
+                    {
+                        x: new Date("2022-01-20").getTime(),
+                        y: 2.5
+                    },
+                    {
+                        x: new Date("2022-01-21").getTime(),
+                        y: 2.47
+                    },
+                    {
+                        x: new Date("2022-01-24").getTime(),
+                        y: 2.38
+                    },
+                    {
+                        x: new Date("2022-01-25").getTime(),
+                        y: 2.3
+                    },
+                    {
+                        x: new Date("2022-01-26").getTime(),
+                        y: 2.36
+                    },
+                    {
+                        x: new Date("2022-01-27").getTime(),
+                        y: 2.23
+                    },
+                    {
+                        x: new Date("2022-01-28").getTime(),
+                        y: 2.31
+                    },
+                    {
+                        x: new Date("2022-01-31").getTime(),
+                        y: 2.65
+                    },
+                    {
+                        x: new Date("2022-02-01").getTime(),
+                        y: 2.86
+                    },
+                    {
+                        x: new Date("2022-02-02").getTime(),
+                        y: 2.58
+                    },
+                    {
+                        x: new Date("2022-02-03").getTime(),
+                        y: 2.31
+                    },
+                    {
+                        x: new Date("2022-02-04").getTime(),
+                        y: 2.35
+                    },
+                    {
+                        x: new Date("2022-02-07").getTime(),
+                        y: 2.3
+                    },
+                    {
+                        x: new Date("2022-02-08").getTime(),
+                        y: 2.34
+                    },
+                    {
+                        x: new Date("2022-02-09").getTime(),
+                        y: 2.53
+                    },
+                    {
+                        x: new Date("2022-02-10").getTime(),
+                        y: 2.44
+                    },
+                    {
+                        x: new Date("2022-02-11").getTime(),
+                        y: 2.26
+                    },
+                    {
+                        x: new Date("2022-02-14").getTime(),
+                        y: 2.24
+                    },
+                    {
+                        x: new Date("2022-02-15").getTime(),
+                        y: 2.65
+                    },
+                    {
+                        x: new Date("2022-02-16").getTime(),
+                        y: 2.51
+                    },
+                    {
+                        x: new Date("2022-02-17").getTime(),
+                        y: 2.32
+                    },
+                    {
+                        x: new Date("2022-02-18").getTime(),
+                        y: 2.17
+                    },
+                    {
+                        x: new Date("2022-02-22").getTime(),
+                        y: 2.05
+                    },
+                    {
+                        x: new Date("2022-02-23").getTime(),
+                        y: 2.01
+                    },
+                    {
+                        x: new Date("2022-02-24").getTime(),
+                        y: 2.18
+                    },
+                    {
+                        x: new Date("2022-02-25").getTime(),
+                        y: 2.27
+                    },
+                    {
+                        x: new Date("2022-02-28").getTime(),
+                        y: 2.37
+                    },
+                    {
+                        x: new Date("2022-03-01").getTime(),
+                        y: 2.27
+                    },
+                    {
+                        x: new Date("2022-03-02").getTime(),
+                        y: 2.14
+                    },
+                    {
+                        x: new Date("2022-03-03").getTime(),
+                        y: 1.97
+                    },
+                    {
+                        x: new Date("2022-03-04").getTime(),
+                        y: 1.9
+                    },
+                    {
+                        x: new Date("2022-03-07").getTime(),
+                        y: 1.99
+                    },
+                    {
+                        x: new Date("2022-03-08").getTime(),
+                        y: 2.03
+                    },
+                    {
+                        x: new Date("2022-03-09").getTime(),
+                        y: 2.1
+                    },
+                    {
+                        x: new Date("2022-03-10").getTime(),
+                        y: 2.06
+                    },
+                    {
+                        x: new Date("2022-03-11").getTime(),
+                        y: 1.88
+                    },
+                    {
+                        x: new Date("2022-03-14").getTime(),
+                        y: 1.78
+                    },
+                    {
+                        x: new Date("2022-03-15").getTime(),
+                        y: 1.7
+                    },
+                    {
+                        x: new Date("2022-03-16").getTime(),
+                        y: 1.99
+                    },
+                    {
+                        x: new Date("2022-03-17").getTime(),
+                        y: 2.12
+                    },
+                    {
+                        x: new Date("2022-03-18").getTime(),
+                        y: 2.18
+                    },
+                    {
+                        x: new Date("2022-03-21").getTime(),
+                        y: 2.13
+                    },
+                    {
+                        x: new Date("2022-03-22").getTime(),
+                        y: 2.33
+                    },
+                    {
+                        x: new Date("2022-03-23").getTime(),
+                        y: 2.39
+                    },
+                    {
+                        x: new Date("2022-03-24").getTime(),
+                        y: 2.44
+                    },
+                    {
+                        x: new Date("2022-03-25").getTime(),
+                        y: 2.32
+                    },
+                    {
+                        x: new Date("2022-03-28").getTime(),
+                        y: 2.38
+                    },
+                    {
+                        x: new Date("2022-03-29").getTime(),
+                        y: 2.54
+                    },
+                    {
+                        x: new Date("2022-03-30").getTime(),
+                        y: 2.38
+                    },
+                    {
+                        x: new Date("2022-03-31").getTime(),
+                        y: 2.25
+                    },
+                    {
+                        x: new Date("2022-04-01").getTime(),
+                        y: 2.28
+                    },
+                    {
+                        x: new Date("2022-04-04").getTime(),
+                        y: 2.5
+                    },
+                    {
+                        x: new Date("2022-04-05").getTime(),
+                        y: 2.32
+                    },
+                    {
+                        x: new Date("2022-04-06").getTime(),
+                        y: 2.21
+                    },
+                    {
+                        x: new Date("2022-04-07").getTime(),
+                        y: 2.13
+                    },
+                    {
+                        x: new Date("2022-04-08").getTime(),
+                        y: 2.1
+                    },
+                    {
+                        x: new Date("2022-04-11").getTime(),
+                        y: 2.14
+                    },
+                    {
+                        x: new Date("2022-04-12").getTime(),
+                        y: 2.09
+                    },
+                    {
+                        x: new Date("2022-04-13").getTime(),
+                        y: 2.12
+                    },
+                    {
+                        x: new Date("2022-04-14").getTime(),
+                        y: 2.02
+                    },
+                    {
+                        x: new Date("2022-04-18").getTime(),
+                        y: 1.9
+                    },
+                    {
+                        x: new Date("2022-04-19").getTime(),
+                        y: 2.08
+                    },
+                    {
+                        x: new Date("2022-04-20").getTime(),
+                        y: 1.89
+                    },
+                    {
+                        x: new Date("2022-04-21").getTime(),
+                        y: 1.81
+                    },
+                    {
+                        x: new Date("2022-04-22").getTime(),
+                        y: 1.73
+                    },
+                    {
+                        x: new Date("2022-04-25").getTime(),
+                        y: 1.81
+                    },
+                    {
+                        x: new Date("2022-04-26").getTime(),
+                        y: 1.72
+                    },
+                    {
+                        x: new Date("2022-04-27").getTime(),
+                        y: 1.7
+                    },
+                    {
+                        x: new Date("2022-04-28").getTime(),
+                        y: 1.78
+                    },
+                    {
+                        x: new Date("2022-04-29").getTime(),
+                        y: 1.7
+                    },
+                    {
+                        x: new Date("2022-05-02").getTime(),
+                        y: 1.77
+                    },
+                    {
+                        x: new Date("2022-05-03").getTime(),
+                        y: 1.76
+                    },
+                    {
+                        x: new Date("2022-05-04").getTime(),
+                        y: 1.89
+                    },
+                    {
+                        x: new Date("2022-05-05").getTime(),
+                        y: 1.7
+                    },
+                    {
+                        x: new Date("2022-05-06").getTime(),
+                        y: 1.61
+                    }
+                ]
+            }],
+            chart: {
+                type: 'area',
+                stacked: false,
+                height: 350,
+                animations: {
+                    enabled: false
+                },
+                zoom: {
+                    type: 'x',
+                    enabled: true,
+                    autoScaleYaxis: true
+                },
+                toolbar: {
+                    autoSelected: 'zoom'
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            markers: {
+                size: 0,
+            },
+            xaxis: {
+                type: 'datetime'
+            }
+        }
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+module Main;
+
+import dev.kobu.codec.Csv
+import dev.kobu.functions.TemplateFunctions
+import dev.kobu.functions.Comparators
+
+type record IndexPage {
+    menu: MenuEntry[]
+}
+
+type record MenuEntry {
+    item: string
+}
+
+type record DataEntry {
+    date: string,
+    open: number,
+    high: number,
+    low: number,
+    close: number,
+    volume: number
+}
+
+type template ChartTemplateType
+
+type template StockHtmlTemplateType
+
+type template IndexHtmlTemplateType
+
+type template MenuEntryHtmlTemplateType
+
+def rule StockDataRule
+         for CsvFile / rows[1:] as row {
+    insert(DataEntry{
+        date: row.columns[0].value,
+        open: parseNumber(row.columns[1].value),
+        high: parseNumber(row.columns[2].value),
+        low: parseNumber(row.columns[3].value),
+        close: parseNumber(row.columns[4].value),
+        volume: parseNumber(row.columns[6].value)
+    })
+
+}
+
+def template StockChartEntryTemplate
+             for CsvFile / rows[1:] as row
+             join DataEntry as entry of row <|
+{
+    x: new Date("${entry.date}").getTime(),
+    y: ${entry.close}
+}
+|>
+
+def template TimeSeriesChartTemplate
+             for CsvFile as csv
+             join AnyTemplate[] as entryTmpl of csv.rows <|
+var options = {
+    series: [{
+        name: "${csv.file.getName().replace("\\.csv$", "")}",
+        data: [
+            ${strJoin(entryTmpl, ",\n")}
+        ]
+    }],
+    chart: {
+        type: 'area',
+        stacked: false,
+        height: 350,
+        animations: {
+            enabled: false
+        },
+        zoom: {
+            type: 'x',
+            enabled: true,
+            autoScaleYaxis: true
+        },
+        toolbar: {
+            autoSelected: 'zoom'
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    markers: {
+        size: 0,
+    },
+    xaxis: {
+        type: 'datetime'
+    }
+}
+|> as ChartTemplateType
+
+def template StockHtmlFileTemplate
+             for CsvFile as csv
+             join ChartTemplateType as chartTmpl of csv <|
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <h1>${csv.file.getName().replace("\\.csv$", "")}</h1>
+    <div id="chart" style="margin: 35px auto;"></div>
+
+    <script>
+        ${chartTmpl}
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+</body>
+</html>
+|> as StockHtmlTemplateType
+
+def template MenuEntryHtmlTemplate
+             for MenuEntry as menuEntry <|
+<li>
+    <a href="#" class="menuLink">${menuEntry.item}</a>
+</li>
+|> as MenuEntryHtmlTemplateType
+
+def template IndexHtmlFileTemplate
+             for IndexPage as page
+             join CsvFile[] as csvFiles
+             join MenuEntryHtmlTemplateType[] as menuTmpl of page.menu <|
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body style="height:100vh;display: flex;flex-direction: column;">
+    <div style="display:flex; flex: 1">
+        <div style="overflow:auto">
+            <ul>
+                ${strJoin(menuTmpl, "\n")}
+            </ul>
+        </div>
+        <div style="flex:1">
+            <iframe id="contentFrame" width="100%" height="100%" style="border:0" src="${page.menu[0].item}.html"></iframe>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var entries = document.getElementsByClassName("menuLink");
+        for (var i = 0; i < entries.length; i++) {
+            console.log(entries[i])
+            entries[i].onclick = function (e) {
+                console.log(e);
+                document.getElementById("contentFrame").src = e.target.innerText + ".html";
+            }
+        }
+    </script>
+</body>
+</html>
+|> as IndexHtmlTemplateType
+
+def action WriteStockHtmlAction
+           for CsvFile as csv
+           join StockHtmlTemplateType as htmlTmpl of csv {
+    var htmlPath = projectRootDir().resolve(Path(["out", csv.file.getName().replace("csv$", "html")]))
+    var htmlFile = File(htmlPath)
+    htmlFile.writeTemplate(htmlTmpl)
+}
+
+def action WriteIndexHtmlAction
+           for IndexPage as page
+           join IndexHtmlTemplateType as htmlTmpl of page {
+    var htmlPath = projectRootDir().resolve(Path(["out", "index.html"]))
+    var htmlFile = File(htmlPath)
+    htmlFile.writeTemplate(htmlTmpl)
+}
+
+           
+fun main(args: string[]): void {
+    var inPath = projectRootDir().resolve(Path(["in"]))
+    var files = readCsv(inPath, "*.csv")
+    var menu = files.map(f => MenuEntry{item: f.file.getName().replace("\\.csv$", "")})
+    menu.sort((e1, e2) => e1.item.compare(e2.item))
+
+    addRules([StockDataRule, StockChartEntryTemplate, TimeSeriesChartTemplate, StockHtmlFileTemplate,
+              MenuEntryHtmlTemplate, IndexHtmlFileTemplate, WriteStockHtmlAction, WriteIndexHtmlAction])
+
+    var workingMemory: AnyRecord[] = [IndexPage{menu: menu}]
+    workingMemory.addAll(files);
+    fireRules(workingMemory)
+}
