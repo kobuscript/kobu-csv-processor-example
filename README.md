@@ -5,3 +5,5 @@ source code generators.
 
 This example processes all CSV files in the "in" folder, and for each one generates an HTML file in the "out" folder, 
 containing a graphical chart. The script also generates an index.html file.
+
+The dataset used in this example was downloaded from [https://www.kaggle.com/datasets/programmerrdai/meme-stocks](https://www.kaggle.com/datasets/programmerrdai/meme-stocks)
